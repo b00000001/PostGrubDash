@@ -8,6 +8,10 @@ const typeDefs = gql`
     password: String
   }
 
+  type Query {
+    me: User
+  }
+
   type Auth {
     token: ID!
     user: User
