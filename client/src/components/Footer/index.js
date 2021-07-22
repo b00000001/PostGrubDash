@@ -25,8 +25,14 @@ const Footer = () => {
           >
             ❤️
           </span>{' '}
-          by the Good Times team.
+          PostGrubDash
         </h4>
+        <div >
+        <h3>About US</h3>
+        <h3>Contact</h3>
+        <h3>Career</h3>
+        <h3>Social Media (Facebook, Instagram, Twitter)</h3>
+        </div>
       </div>
     </footer>
   );
