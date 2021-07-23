@@ -4,7 +4,7 @@ import { Redirect, useParams } from 'react-router-dom';
 import { useQuery } from '@apollo/client';
 // Utilities
 import Auth from '../utils/auth';
-import { QUERY_USERS, QUERY_USER, QUERY_ME } from '../utils/queries';
+import { QUERY_ME } from '../utils/queries';
 // Components
 import UserList from '../components/UserList';
 
@@ -12,15 +12,15 @@ const Profile = () => {
   const { id } = useParams();
 
   // Get current user
-  const { loading, data, error } = useQuery(id ? QUERY_USER : QUERY_ME, {
+  const { loading, data, error } = useQuery(QUERY_ME, {
     variables: { id },
   });
 
   // Get a list of all users
-  const { usersLoading, data: usersData } = useQuery(QUERY_USERS);
+  // const { usersLoading, data: usersData } = useQuery(QUERY_USERS);
 
   const user = data?.me || data?.user || {};
-  const users = usersData?.users || [];
+  // const users = usersData?.users || [];
 
   if (error) console.log(error);
 
@@ -42,16 +42,16 @@ const Profile = () => {
     );
   }
 
-  const renderUserList = () => {
-    if (usersLoading) return null;
-    // Only renders users who's profile we're not currently viewing
-    const notMeUsers = users.filter(o => o._id !== user._id);
-    return (
-      <div className="col-12 col-md-10 mb-5">
-        <UserList users={notMeUsers} title="User List" />
-      </div>
-    );
-  };
+  // const renderUserList = () => {
+  //   if (usersLoading) return null;
+  //   // Only renders users who's profile we're not currently viewing
+  //   const notMeUsers = users.filter(o => o._id !== user._id);
+  //   return (
+  //     <div className="col-12 col-md-10 mb-5">
+  //       <UserList users={notMeUsers} title="User List" />
+  //     </div>
+  //   );
+  // };
 
   const renderCurrentUserInfo = () => {
     if (id) return null;
@@ -70,7 +70,7 @@ const Profile = () => {
           Viewing {id ? `${user.username}'s` : 'your'} profile.
         </h2>
         {renderCurrentUserInfo()}
-        {renderUserList()}
+        {/* {renderUserList()} */}
       </div>
     </div>
   );
