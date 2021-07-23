@@ -3,21 +3,21 @@ import React from 'react';
 import { useQuery } from '@apollo/client';
 // Utilities
 import Auth from '../utils/auth';
-import { QUERY_USERS } from '../utils/queries';
+// import { QUERY_USERS } from '../utils/queries';
 // Components
 import UserList from '../components/UserList';
 
 const Home = () => {
-  const { loading, data } = useQuery(QUERY_USERS);
-  const users = data?.users || [];
+  // const { loading, data } = useQuery(QUERY_USERS);
+  // const users = data?.users || [];
 
-  const renderUserList = () => {
-    if (loading) {
-      return <h2>Loading...</h2>
-    } else {
-      return <UserList users={users} title="List of Users" />
-    }
-  } 
+  // const renderUserList = () => {
+  //   if (loading) {
+  //     return <h2>Loading...</h2>
+  //   } else {
+  //     return <UserList users={users} title="List of Users" />
+  //   }
+  // } 
 
   const renderUsername = () => {
     if (!Auth.loggedIn()) return null;
@@ -34,7 +34,7 @@ const Home = () => {
           {renderUsername()}
         </div>
         <div className="col-12 col-md-8 mb-3">
-          {renderUserList()}
+          {/* {renderUserList()} */}
         </div>
       </div>
     </main>
