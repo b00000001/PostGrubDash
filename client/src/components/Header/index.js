@@ -20,6 +20,23 @@ const Header = () => {
           <button className="btn btn-lg btn-light m-2" onClick={logout}>
             Logout
           </button>
+          <Link className="btn btn-lg btn-info m-2" to="/search">
+          Search
+          </Link>
+
+        <header className="bg-dark text-light mb-4 py-3 flex-row align-center">
+          <div className="nav-nav-bar flex-row justify-left align-left"> 
+          <Link className="btn btn-lg btn-info m-2" to="/viewProfile">
+          View Profile
+          </Link>
+          <Link className="btn btn-lg btn-info m-2" to="/deliveryTime">
+          Delivery Time
+          </Link>
+          <Link className="btn btn-lg btn-info m-2" to="/addRestaurant">
+          Add Restaurant
+          </Link>
+          </div>
+      </header>
         </>
       );
     }
