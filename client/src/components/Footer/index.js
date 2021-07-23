@@ -1,5 +1,8 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { useLocation, useHistory } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faInstagram, faFacebook, faTwitter } from '@fortawesome/free-brands-svg-icons';
 
 const Footer = () => {
   const location = useLocation();
@@ -15,23 +18,16 @@ const Footer = () => {
             &larr; Go Back
           </button>
         )}
-        <h4>
-          Made with{' '}
-          <span
-            className="emoji"
-            role="img"
-            aria-label="heart"
-            aria-hidden="false"
-          >
-            ❤️
-          </span>{' '}
-          PostGrubDash
-        </h4>
-        <div >
-        <h3>About US</h3>
-        <h3>Contact</h3>
-        <h3>Career</h3>
-        <h3>Social Media (Facebook, Instagram, Twitter)</h3>
+        <div className="container max-width bg-gray-200 justify-items-center font-serif m-auto space-x-24">
+          <Link to="/about">
+        <h3 className="inline m-5 m-auto text-2xl object-center align-middle">About Us</h3>
+        </Link>
+        <Link to="/contact">
+        <h3 className="inline m-5 text-2xl align-middle">Contact</h3>
+        </Link>
+        <FontAwesomeIcon className="fa-3x m-5 align-middle" icon={faFacebook}/>
+        <FontAwesomeIcon className="fa-3x m-5 align-middle" icon={faInstagram}/>
+        <FontAwesomeIcon className="fa-3x m-5 align-middle" icon={faTwitter}/>
         </div>
       </div>
     </footer>
