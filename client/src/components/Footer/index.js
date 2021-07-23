@@ -25,9 +25,9 @@ const Footer = () => {
         <Link to="/contact">
         <h3 className="inline m-5 text-2xl align-middle">Contact</h3>
         </Link>
-        <FontAwesomeIcon className="fa-3x m-5 align-middle" icon={faFacebook} />
-        <FontAwesomeIcon className="fa-3x m-5 align-middle" icon={faInstagram} />
-        <FontAwesomeIcon className="fa-3x m-5 align-middle" icon={faTwitter} />
+        <FontAwesomeIcon className="fa-3x m-5 align-middle" icon={faFacebook}/>
+        <FontAwesomeIcon className="fa-3x m-5 align-middle" icon={faInstagram}/>
+        <FontAwesomeIcon className="fa-3x m-5 align-middle" icon={faTwitter}/>
         </div>
       </div>
     </footer>
