@@ -54,15 +54,15 @@ const Header = () => {
   };
 
   return (
-    <header className="bg-dark text-light mb-4 py-3 flex-row align-center">
-      <div className="container flex-row justify-space-between-lg justify-center align-center">
+    <header className="bg-secondary text-light mb-4 py-3 flex-row align-center">
+      <div className="container flex justify-between-lg justify-end align-center">
         <div>
-          <Link className="text-light" to="/">
+          {/* <Link className="text-light" to="/">
             <h1 className="m-0">Fun User List</h1>
-          </Link>
+          </Link> */}
         </div>
         <div>
-          <p className="m-0 text-center">Simple App to View Users.</p>
+          {/* <p className="m-0 text-center">Simple App to View Users.</p> */}
           {renderControls()}
         </div>
       </div>

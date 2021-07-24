@@ -1,17 +1,15 @@
 import React, { useEffect } from 'react';
-// import ProductItem from '../ProductItem';
-// import { useStoreContext } from '../../utils/GlobalState';
-// import { UPDATE_PRODUCTS } from '../../utils/actions';
-// import { useQuery } from '@apollo/client';
-// import { QUERY_PRODUCTS } from '../../utils/queries';
-// import { idbPromise } from '../../utils/helpers';
-// import spinner from '../../assets/spinner.gif';
+import RestaurantCard from '../RestaurantCard';
+import { useStoreContext } from '../../utils/GlobalState';
+import { UPDATE_PRODUCTS } from '../../utils/actions';
+import { useQuery } from '@apollo/client';
+import { QUERY_PRODUCTS } from '../../utils/queries';
+import { idbPromise } from '../../utils/helpers';
+import spinner from '../../assets/spinner.gif';
 
-function ProductList() {
+function RestaurantList() {
   const [state, dispatch] = useStoreContext();
-
   const { currentCategory } = state;
-
   const { loading, data } = useQuery(QUERY_PRODUCTS);
 
   useEffect(() => {
@@ -33,7 +31,7 @@ function ProductList() {
     }
   }, [data, loading, dispatch]);
 
-  function filterProducts() {
+  function filterRestaurants() {
     if (!currentCategory) {
       return state.products;
     }
@@ -48,8 +46,8 @@ function ProductList() {
       <h2>Our Products:</h2>
       {state.products.length ? (
         <div className="flex-row">
-          {filterProducts().map((product) => (
-            <ProductItem
+          {filterRestaurants().map((product) => (
+            <RestaurantCard
               key={product._id}
               _id={product._id}
               image={product.image}
@@ -67,4 +65,4 @@ function ProductList() {
   );
 }
 
-export default ProductList;
+export default RestaurantList;
