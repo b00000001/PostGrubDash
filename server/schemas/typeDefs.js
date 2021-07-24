@@ -6,6 +6,7 @@ const typeDefs = gql`
     name: String!
   }
   type Restaurant {
+    _id: ID
     name: String
     description: String
     image: String
@@ -31,7 +32,7 @@ const typeDefs = gql`
     name: String
     description: String
     image: String
-    price: Int
+    price: Float
   }
 
   type Checkout {
