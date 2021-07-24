@@ -1,13 +1,17 @@
 const { Schema, model } = require('mongoose');
 const bcrypt = require('bcrypt');
-// const Order = require('./Order');
+const Order = require('./Order');
 
 const userSchema = new Schema({
-  username: {
+  firstName: {
     type: String,
     required: true,
-    unique: true,
-    trim: true,
+    trim: true
+  },
+  lastName: {
+    type: String,
+    required: true,
+    trim: true
   },
   email: {
     type: String,
@@ -20,7 +24,7 @@ const userSchema = new Schema({
     required: true,
     minlength: 5,
   },
-  // orders: [Order.schema]
+  orders: [Order.schema]
 });
 
 userSchema.pre('save', async function (next) {
