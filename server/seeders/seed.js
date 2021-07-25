@@ -170,7 +170,54 @@ db.once('open', async () => {
           image: '/la-belle-helene/ratatouille.jpg'
         }
       ]
-    }
+    },
+    {
+      name: 'El Amigo',
+      description:
+        'Vibrant Mexican eatery with modern twists on traditional classics',
+      image: 'el/amigo/tacos.jpg',
+      category: categories[3]._id,
+      price: 9.99,
+      products: [
+        {
+          name: "Burrito",
+          description: "Flour tortilla filled with black beans, rice, corn, pico de gallo, shredded cheese, guacamole, and your choice of chicken or carnitas",
+          price: 8.99,
+          image: '/el-amigo/burrito.png'
+        },
+        {
+          name: "Fajitas",
+          description: "Sauteed fresh vegetables served with your choice of chicken or steak",
+          price: 10.99,
+          image: '/el-amigo/fajitas.jpg'
+        },
+        {
+          name: "Tacos",
+          description: "Four flour tortilla tacos filled with pico de gallo, feta cheese, crema, and your choice of chicken or carnitas",
+          price: 9.99,
+          image: '/el-amigo/tacos.jpg'
+
+        },
+        {
+          name: "Quesadilla",
+          description: "Sliced roasted lamb with sliced onions and tomatos, wrapped in a warm pita.",
+          price: 10.99,
+          image: '/platos-plate/gyro.jpg'
+        },
+        {
+          name: "Nachos Supreme",
+          description: "Crispy tortilla chips topped with ground beef, pico de gallo, pinto beans, monterrey cheese, avocados, and a dollop of sour cream, finished off with a sprinkle of jalapenos on top.",
+          price: 10.99,
+          image: '/el-amigo/nachos-supreme.jpg'
+        },
+        {
+          name: "Bottle of Water",
+          description: "Ice cold bottle of water",
+          price: 1.99,
+          image: '/el-amigo/bottled-water.png'
+        }
+      ]
+    },
   ]);
 
   console.log('restaurants seeded');
