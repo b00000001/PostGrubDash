@@ -49,14 +49,10 @@ const Signup = () => {
                 <Link to="/">back to the homepage.</Link>
               </p>
             ) : (
-<<<<<<< HEAD
-              <form className="container" onSubmit={handleFormSubmit}>
-=======
               <form onSubmit={handleFormSubmit}>
                 <label class="block text-grey-darker text-sm font-bold mb-2" for="username">
                   Username
                 </label>
->>>>>>> 396f5956274bff1a8effc035770775076b6b5254
                 <input
                   className="form-input shadow appearance-none border border-red rounded w-full py-2 px-3 text-grey-darker mb-3"
                   placeholder="Your username"
@@ -65,14 +61,9 @@ const Signup = () => {
                   value={formState.name}
                   onChange={handleChange}
                 />
-<<<<<<< HEAD
-                <br/>
-                <br/>
-=======
                 <label class="block text-grey-darker text-sm font-bold mb-2" for="email">
                   Email
                 </label>
->>>>>>> 396f5956274bff1a8effc035770775076b6b5254
                 <input
                   className="form-input shadow appearance-none border border-red rounded w-full py-2 px-3 text-grey-darker mb-3"
                   placeholder="Your email"
@@ -81,14 +72,9 @@ const Signup = () => {
                   value={formState.email}
                   onChange={handleChange}
                 />
-<<<<<<< HEAD
-                <br/>
-                <br/>
-=======
                 <label class="block text-grey-darker text-sm font-bold mb-2" for="password">
                   Password
                 </label>
->>>>>>> 396f5956274bff1a8effc035770775076b6b5254
                 <input
                   className="form-input shadow appearance-none border border-red rounded w-full py-2 px-3 text-grey-darker mb-3"
                   placeholder="******"
