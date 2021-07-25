@@ -24,7 +24,7 @@ const Header = () => {
           Search
           </Link>
 
-        <header className="bg-dark text-light mb-4 py-3 flex-row align-center">
+        <header className="food-back">
           <div className="nav-nav-bar flex-row justify-left align-left"> 
           <Link className="btn btn-lg btn-info m-2" to="/viewProfile">
           View Profile
@@ -44,17 +44,17 @@ const Header = () => {
     return (
       <>
         <Link className="btn btn-lg btn-info m-2" to="/login">
-          Login
+          <button>Login</button>
         </Link>
         <Link className="btn btn-lg btn-light m-2" to="/signup">
-          Signup
+          <button>Signup</button>
         </Link>
       </>
     )
   };
 
   return (
-    <header className="bg-dark text-light mb-4 py-3 flex-row align-center">
+    <header className="food-back container bg-dark text-light mb-4 py-3 flex-row align-center">
       <div className="container flex-row justify-space-between-lg justify-center align-center">
         <div>
           <Link className="text-light" to="/">
@@ -62,7 +62,7 @@ const Header = () => {
           </Link>
         </div>
         <div>
-          <p className="m-0 text-center">Simple App to View Users.</p>
+          <img className="logo" src="/images/pgd-logo.jpg" alt="PostGrubDash Logo"/>
           {renderControls()}
         </div>
       </div>
