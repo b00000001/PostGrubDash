@@ -76,7 +76,106 @@ db.once('open', async () => {
           image: '/platos-plate/soft-drink.jpg'
         }
       ]
+    },
+
+    {
+      name: 'king-spicy',
+      description:
+        'Home to all spicy and flavorful Indian cuisine',
+      image: '/king-spicy/baked-samosa.jpg',
+      category: categories[0]._id,
+      price: 3.99,
+      menuItems: [
+        {
+          name: "tomato-rice",
+          description: "a flavorful and delicious dish made with rice and tomatoes,spices and herbs.",
+          price: 8.99,
+          image: '/king-spicy/tomato-rice.jpg'
+        },
+        {
+          name: "Chana-Masala",
+          description: "It’s a hearty, saucy chickpea and tomato dish with warming spices.",
+          price: 13.99,
+          image: '/king-spicy/chana-masala.jpg'
+        },
+        {
+          name: "pakoda",
+          description: "delicious indian crisp fried snack made with flour,spices and paneer.",
+          price: 14.99,
+          image: '/king-spicy/pakoda.jpg'
+
+        },
+        {
+          name: "Poha",
+          description: "delicious and healthy breakfast recipe made with onions, potatoes and seasoning like chillies, crushed peanuts, lemon and curry leaves. ",
+          price:10.99,
+          image: '/king-spicy/poha.jpg'
+        },
+        {
+          name: "veg-biryani",
+          description: "an aromatic rice dish made with basmati rice, mix veggies, herbs & biryani spice.",
+          price: 12.99,
+          image: '/king-spicy/veg-biryani.jpg'
+        },
+        {
+          name: "gulkand_chai",
+          description: "popular preserved tea made from rose petals that are dried and mixed along with sugar mixture.",
+          price: 1.50,
+          image: '/king-spicy/gulkand_chai.jpg'
+        }
+      ]
+
+    },
+    
+    {
+      name: 'la-belle-helene',
+      description:
+        'We serve french classics foods and drinks with a modern sensibility',
+      image: '/la-belle-helene/confit-de-canard.jpg',
+      category: categories[0]._id,
+      price: 5.99,
+      menuItems: [
+        {
+          name: "boeuf-bourguignon",
+          description: "stew made from beef braised in red wine, beef broth, and seasoned vegetables including pearl onions and mushrooms..",
+          price: 18.99,
+          image: '/la-belle-helene/boeuf-bourguignon.jpg'
+        },
+        {
+          name: "absinthe",
+          description: "bright-green, aniseed-flavored liqueur is famous for its hallucinatory effects.",
+          price: 15.99,
+          image: '/la-belle-helene/absinthe.jpg'
+        },
+        {
+          name: "salade-niçoise",
+          description: "a mix of lettuce, fresh tomatoes, boiled eggs,tuna, green beans, Nicoise Cailletier olives, and anchovies.",
+          price: 4.99,
+          image: '/king-spicy/salade-niçoise.jpg'
+
+        },
+        {
+          name: "coq-au-vin",
+          description: "delicious dish made of chicken braised with wine, mushrooms, salty pork or bacon (lardons), mushrooms, onions, garlic. ",
+          price:20.99,
+          image:'/la-belle-helene/coq-qu-vin.jpg'
+        },
+        {
+          name: "flamiche",
+          description: "this a puff-pastry crust filled with cheese and vegetables and resembles a quiche.",
+          price: 2.99,
+          image:'/la-belle-helene/flamiche.jpg'
+        },
+        {
+          name: "ratatouille",
+          description: "iconic french made with vegetables shallow-fried and then layered in a casserole dish before being baked in an oven",
+          price: 1.35,
+          image: '/la-belle-helene/ratatouille.jpg'
+        }
+      ]
+
     }
+    
   ]);
 
   console.log('products seeded');
