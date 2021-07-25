@@ -26,15 +26,14 @@ const Home = () => {
 
   return (
     <main>
-      <div className="flex-row justify-center">
+      <div className="flex justify-center">
         <div
           className="col-12 col-md-10 mb-3 p-3"
           style={{ border: '1px dotted #1a1a1a' }}
         >
           {renderUsername()}
         </div>
-        <div className="col-12 col-md-8 mb-3">
-          {/* {renderUserList()} */}
+        <div className="grid grid-flow-row grid-cols-3 grid-rows-3 gap-4">
         </div>
       </div>
     </main>

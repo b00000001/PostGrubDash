@@ -21,7 +21,25 @@ const restaurantSchema = new Schema({
         type: Schema.Types.ObjectId,
         ref: 'Category',
         required: true
-    }
+    },
+    products: [{
+        name: {
+            type: String,
+            required: true,
+            trim: true
+        },
+        description: {
+            type: String
+        },
+        price: {
+            type: Number,
+            required: true,
+            min: 0.99
+        },
+        image: {
+            type: String
+        }
+    }]
 });
 
 const Restaurant = model('Restaurant', restaurantSchema);

@@ -38,10 +38,10 @@ const Signup = () => {
   };
 
   return (
-    <main className="flex-row justify-center mb-4">
+    <main className="flex justify-center mb-4">
       <div className="col-12 col-lg-10">
         <div className="card">
-          <h4 className="card-header bg-dark text-light p-2">Sign Up</h4>
+          {/* <h4 className="card-header bg-dark text-light p-2">Sign Up</h4> */}
           <div className="card-body">
             {data ? (
               <p>
@@ -49,29 +49,48 @@ const Signup = () => {
                 <Link to="/">back to the homepage.</Link>
               </p>
             ) : (
+<<<<<<< HEAD
               <form className="container" onSubmit={handleFormSubmit}>
+=======
+              <form onSubmit={handleFormSubmit}>
+                <label class="block text-grey-darker text-sm font-bold mb-2" for="username">
+                  Username
+                </label>
+>>>>>>> 396f5956274bff1a8effc035770775076b6b5254
                 <input
-                  className="form-input"
+                  className="form-input shadow appearance-none border border-red rounded w-full py-2 px-3 text-grey-darker mb-3"
                   placeholder="Your username"
                   name="username"
                   type="text"
                   value={formState.name}
                   onChange={handleChange}
                 />
+<<<<<<< HEAD
                 <br/>
                 <br/>
+=======
+                <label class="block text-grey-darker text-sm font-bold mb-2" for="email">
+                  Email
+                </label>
+>>>>>>> 396f5956274bff1a8effc035770775076b6b5254
                 <input
-                  className="form-input"
+                  className="form-input shadow appearance-none border border-red rounded w-full py-2 px-3 text-grey-darker mb-3"
                   placeholder="Your email"
                   name="email"
                   type="email"
                   value={formState.email}
                   onChange={handleChange}
                 />
+<<<<<<< HEAD
                 <br/>
                 <br/>
+=======
+                <label class="block text-grey-darker text-sm font-bold mb-2" for="password">
+                  Password
+                </label>
+>>>>>>> 396f5956274bff1a8effc035770775076b6b5254
                 <input
-                  className="form-input"
+                  className="form-input shadow appearance-none border border-red rounded w-full py-2 px-3 text-grey-darker mb-3"
                   placeholder="******"
                   name="password"
                   type="password"
@@ -81,7 +100,7 @@ const Signup = () => {
                 <br/>
                 <br/>
                 <button
-                  className="btn btn-block btn-primary"
+                  className=" shadow appearance-none border border-red rounded w-full py-2 px-3 text-grey-darker mt-5 mb-3"
                   style={{ cursor: 'pointer' }}
                   type="submit"
                 >

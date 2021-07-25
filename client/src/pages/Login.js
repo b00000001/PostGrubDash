@@ -40,10 +40,10 @@ const Login = (props) => {
   };
 
   return (
-    <main className="flex-row justify-center mb-4">
+    <main className="flex justify-center mb-4">
       <div className="col-12 col-lg-10">
         <div className="card">
-          <h4 className="card-header bg-dark text-light p-2">Login</h4>
+          {/* <h4 className="card-header bg-dark text-light p-2">Login</h4> */}
           <div className="card-body">
             {data ? (
               <p>
@@ -52,16 +52,22 @@ const Login = (props) => {
               </p>
             ) : (
               <form onSubmit={handleFormSubmit}>
+                <label class="block text-grey-darker text-sm font-bold mb-2" for="email">
+                  Email
+                </label>
                 <input
-                  className="form-input"
+                  className="form-input shadow appearance-none border border-red rounded w-full py-2 px-3 text-grey-darker mb-3"
                   placeholder="Your email"
                   name="email"
                   type="email"
                   value={formState.email}
                   onChange={handleChange}
                 />
+                <label class="block text-grey-darker text-sm font-bold mb-2" for="password">
+                  Password
+                </label>
                 <input
-                  className="form-input"
+                  className="form-input shadow appearance-none border border-red rounded w-full py-2 px-3 text-grey-darker mb-3"
                   placeholder="******"
                   name="password"
                   type="password"
@@ -69,11 +75,11 @@ const Login = (props) => {
                   onChange={handleChange}
                 />
                 <button
-                  className="btn btn-block btn-primary"
+                  className="shadow appearance-none border border-red rounded w-full py-2 px-3 text-grey-darker mt-5 mb-3"
                   style={{ cursor: 'pointer' }}
                   type="submit"
                 >
-                  Submit
+                  Sign In
                 </button>
               </form>
             )}
