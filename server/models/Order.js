@@ -5,12 +5,29 @@ const orderSchema = new Schema({
     type: Date,
     default: Date.now
   },
-  products: [
-    {
-      type: Schema.Types.ObjectId,
-      ref: 'Product'
+  restaurant:
+  {
+    type: Schema.Types.ObjectId,
+    ref: 'Restaurant'
+  },
+  products: [{
+    name: {
+      type: String,
+      required: true,
+      trim: true
+    },
+    description: {
+      type: String
+    },
+    price: {
+      type: Number,
+      required: true,
+      min: 0.99
+    },
+    image: {
+      type: String
     }
-  ]
+  }]
 });
 
 const Order = model('Order', orderSchema);

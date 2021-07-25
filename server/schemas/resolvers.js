@@ -1,21 +1,18 @@
 const { AuthenticationError } = require('apollo-server-express');
 const { signToken } = require('../utils/auth');
-const { User } = require('../models');
+const { User, Restaurant } = require('../models');
 
 const resolvers = {
   Query: {
-    users: async () => {
-      return User.find();
-    },
-    user: async (_, args) => {
-      return User.findOne({ _id: args.id });
-    },
     me: async (_, args, context) => {
       if (context.user) {
         return User.findOne({ _id: context.user._id });
       }
       throw new AuthenticationError('You need to be logged in!');
     },
+    restaurants: async () => {
+      return await Restaurant.find({}).populate()
+    }
   },
 
   Mutation: {
