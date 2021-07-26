@@ -52,6 +52,8 @@ const Login = (props) => {
               </p>
             ) : (
               <form onSubmit={handleFormSubmit}>
+                <h2 className="text-2xl">Already have an account? Log in here!</h2>
+                <br/>
                 <label class="block text-grey-darker text-sm font-bold mb-2" for="email">
                   Email
                 </label>

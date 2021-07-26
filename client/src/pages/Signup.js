@@ -50,6 +50,8 @@ const Signup = () => {
               </p>
             ) : (
               <form onSubmit={handleFormSubmit}>
+                <h2 className="text-2xl">Don't have an account yet? Sign up here!</h2>
+                <br/>
                 <label class="block text-grey-darker text-sm font-bold mb-2" for="username">
                   Username
                 </label>
