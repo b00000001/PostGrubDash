@@ -7,12 +7,7 @@ import Auth from "../utils/auth";
 // Components
 import CategoryMenu from '../components/CategoryMenu';
 import RestaurantList from '../components/RestaurantList';
-
-const Home = () => {
-  // const { loading, data } = useQuery(QUERY_ALL_RESTAURANTS);
-  // const restaurants = data?.restaurants || [];
-
-import UserList from "../components/UserList";
+// import UserList from "../components/UserList";
 import SearchBar from "../components/SearchBar";
 
 const Home = () => {
@@ -50,7 +45,7 @@ const Home = () => {
         >
           {renderUsername()}
         </div>
-        </div> */}
+
         <button onClick={() => handleClick()}>Get Location</button>
         {userLocation ? (
           <h3>
