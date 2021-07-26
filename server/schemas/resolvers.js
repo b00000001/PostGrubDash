@@ -6,6 +6,7 @@ const { User, Restaurant, Category, Order } = require('../models');
 const resolvers = {
   Query: {
     me: async (_, args, context) => {
+
       if (context.user) {
         return User.findOne({ _id: context.user._id });
       }
@@ -15,7 +16,7 @@ const resolvers = {
       return await Category.find();
     },
     restaurants: async () => {
-      return await Restaurant.find({}).populate()
+      return await Restaurant.find({}).populate('products');
     },
     order: async (parent, { _id }, context) => {
       if (context.user) {
