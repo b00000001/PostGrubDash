@@ -51,3 +51,5 @@ const typeDefs = gql`
   }
 `;
 module.exports = typeDefs;
+
+// addOrder(productIds: [ID]!): Order
