@@ -22,7 +22,7 @@ db.once('open', async () => {
     { name: 'Indian' },
     { name: 'French' },
     { name: 'Mexican' },
-    { name: 'Toys' }
+    { name: 'Hawaiian' }
   ]);
 
   console.log('categories seeded');
@@ -219,49 +219,49 @@ db.once('open', async () => {
       ]
     },
     {
-      name: 'Biscuit Basket',
+      name: 'Ohana Bros',
       description:
-        'Fresh and delicious Greek food with all the classics!',
-      image: '/platos-plate/gyro.jpg',
+        'Authentic Hawaiian food made with love',
+      image: '/ohana-bros/gyro.jpg',
       category: categories[0]._id,
       price: 4.99,
       products: [
         {
-          name: "Greek Fries",
-          description: "Crispy, crunchy fries with chunks of feta cheese, drizzled with olive oil.",
-          price: 6.99,
-          image: '/platos-plate/greek-fries.jpg'
+          name: "Kalua Plate",
+          description: "Succulent roast pork served with white rice and homemade macaroni salad.",
+          price: 12.99,
+          image: '/ohana-bros/kalua-plate.jpg'
         },
         {
-          name: "Spanakopita",
-          description: "Tasty spinach cooked with onions and feta cheese, wrapped in a flaky phyllo dough.",
-          price: 9.99,
-          image: '/platos-plate/spanakopita.jpg'
+          name: "Chicken Katsu Plate",
+          description: "Crispy, fried chicken served with white rice and homemade macaroni salad.",
+          price: 11.99,
+          image: '/ohana-bros/chicken-katsu-plate.jpg'
         },
         {
-          name: "Greek Salad",
-          description: "Fresh lettuce, sliced onions, slice cucumbers, olives, and feta cheese, tossed with salad dressing.",
-          price: 6.99,
-          image: '/platos-plate/greek-salad.jpg'
+          name: "Loco Moco Plate",
+          description: "Burger patty topped with two fried eggs and gravy, served with white rice and homemade macaroni salad.",
+          price: 10.99,
+          image: '/ohana-bros/loco-moco-plate.jpg'
 
         },
         {
-          name: "Gyro",
-          description: "Sliced roasted lamb with sliced onions and tomatos, wrapped in a warm pita.",
+          name: "Teriyaki Chicken Plate",
+          description: "Teriyaki-glazed chicken served with white rice and homemade macaroni salad.",
           price: 10.99,
-          image: '/platos-plate/gyro.jpg'
+          image: '/ohana-bros/teriyaki-chicken-plate.jpg'
         },
         {
-          name: "Moussaka",
-          description: "Layered grounded lamb and roasted eggplant, topped with a bechemel sauce.",
-          price: 12.99,
-          image: '/platos-plate/moussaka.jpg'
+          name: "Musubi Stack",
+          description: "Grilled Spam slices on top of white rice, wrapped with seaweed.",
+          price: 7.99,
+          image: '/ohana-bros/musubi.jpg'
         },
         {
-          name: "Soft Drink",
+          name: "Craft Beer",
           description: "Always cold soda.",
-          price: 1.99,
-          image: '/platos-plate/soft-drink.jpg'
+          price: 16.99,
+          image: '/ohana-bros/craft-beer.jpg'
         }
       ]
     },
