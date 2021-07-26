@@ -1,13 +1,10 @@
 // Node Modules
-import React from 'react';
-import { useQuery } from '@apollo/client';
+import React from "react";
+import { useQuery } from "@apollo/client";
 // Utilities
-import Auth from '../utils/auth';
+import Auth from "../utils/auth";
 // import { QUERY_USERS } from '../utils/queries';
 // Components
-import RestaurantCard from '../components/RestaurantCard';
-import SearchBar from '../components/SearchBar';
-// import { QUERY_ALL_RESTAURANTS } from '../utils/queries';
 import CategoryMenu from '../components/CategoryMenu';
 import RestaurantList from '../components/RestaurantList';
 
@@ -15,18 +12,34 @@ const Home = () => {
   // const { loading, data } = useQuery(QUERY_ALL_RESTAURANTS);
   // const restaurants = data?.restaurants || [];
 
-  // const renderRestaurantList = () => {
-  //   if (loading) {
-  //     return <h2>Loading...</h2>
-  //   } else {
-  //     return restaurants.map(item => <div>${item.image}</div>);
-  //   }
-  // } 
+import UserList from "../components/UserList";
+import SearchBar from "../components/SearchBar";
 
+const Home = () => {
+  const [userLocation, setUserLocation] = React.useState(null);
+  // const { loading, data } = useQuery(QUERY_USERS);
+  // const users = data?.users || [];
+
+  const handleClick = () => {
+    console.log("click");
+    if ("geolocation" in navigator) {
+      console.log("Available");
+      navigator.geolocation.getCurrentPosition(function (position) {
+        setUserLocation({
+          lat: position.coords.latitude,
+          lng: position.coords.longitude
+        });
+        console.log("Latitude is :", position.coords.latitude);
+        console.log("Longitude is :", position.coords.longitude);
+      });
+    } else {
+      console.log("Not Available");
+    }
+  };
   const renderUsername = () => {
     if (!Auth.loggedIn()) return null;
     return Auth.getProfile().data.username;
-  }
+  };
 
   return (
     <main>
@@ -37,8 +50,19 @@ const Home = () => {
         >
           {renderUsername()}
         </div>
-
-        <SearchBar />
+        </div> */}
+        <button onClick={() => handleClick()}>Get Location</button>
+        {userLocation ? (
+          <h3>
+            <strong>
+              Your Location <br />
+            </strong>
+            Longitude: {userLocation.lat}
+            <br />
+            Latitude {userLocation.lng}
+          </h3>
+        ) : null}
+        <SearchBar userLocation={userLocation} />
         <CategoryMenu />
         <RestaurantList />
       </div>
