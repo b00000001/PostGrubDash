@@ -14,6 +14,7 @@ import Login from './pages/Login';
 import Profile from './pages/Profile';
 import About from './pages/About';
 import Contact from './pages/Contact';
+import Restaurant from './pages/Restaurant';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import Cart from './pages/Cart';
@@ -66,6 +67,9 @@ function App() {
             </Route>
             <Route exact path="/users/:id">
               <Profile />
+             </Route> 
+            <Route exact path="/restaurants/:id">
+              <Restaurant />
              </Route> 
             <Route exact path="/about">
               <About />
