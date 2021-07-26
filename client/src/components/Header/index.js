@@ -14,26 +14,28 @@ const Header = () => {
     if (Auth.loggedIn()) {
       return (
         <>
+        <div className="bg-blue-400">
           <Link className="btn btn-lg btn-info m-2" to="/me">
-            {Auth.getProfile().data.username}'s profile
+            <button>{Auth.getProfile().data.username}'s profile</button>
           </Link>
           <button className="btn btn-lg btn-light m-2" onClick={logout}>
             Logout
           </button>
           <Link className="btn btn-lg btn-info m-2" to="/search">
-          Search
+          <button>Search</button>
           </Link>
+        </div>
 
         <header className="food-back">
-          <div className="nav-nav-bar flex-row justify-left align-left"> 
+          <div className="nav-nav-bar flex-row justify-left align-left bg-black text-white"> 
           <Link className="btn btn-lg btn-info m-2" to="/viewProfile">
-          View Profile
+          <button>View Profile</button>
           </Link>
           <Link className="btn btn-lg btn-info m-2" to="/deliveryTime">
-          Delivery Time
+          <button>Delivery Time</button>
           </Link>
           <Link className="btn btn-lg btn-info m-2" to="/addRestaurant">
-          Add Restaurant
+          <button>Add Restaurant</button>
           </Link>
           </div>
       </header>

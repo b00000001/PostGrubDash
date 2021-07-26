@@ -16,11 +16,12 @@ button {
     box-shadow: 0 5px 10px black;
     margin: 10px;
     border: 2px solid black;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 button:hover {
     background-color: rgb(17, 118, 158);
-    
 }
 
 body {
@@ -43,4 +44,8 @@ body {
 form {
     margin-left: auto;
     margin-right: auto;
+    border: 2px solid black;
+    padding: 30px;
+    background-color: white;
+    border-radius: 8px;
 }
