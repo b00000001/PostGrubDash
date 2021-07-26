@@ -1,12 +1,12 @@
-import { gql } from '@apollo/client';
+import { gql } from "@apollo/client";
 
 export const QUERY_CATEGORIES = gql`
-{
-  categories {
-    _id
-    name
+  {
+    categories {
+      _id
+      name
+    }
   }
-}
 `;
 
 export const QUERY_RESTAURANTS = gql`
@@ -19,6 +19,13 @@ export const QUERY_RESTAURANTS = gql`
       price
       category {
         _id
+      }
+      products {
+        _id
+        name
+        description
+        image
+        price
       }
     }
   }
@@ -49,7 +56,6 @@ export const QUERY_ME = gql`
         _id
         purchaseDate
         products {
-          _id
           name
           description
           price
