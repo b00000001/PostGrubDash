@@ -21,7 +21,7 @@ db.once('open', async () => {
     { name: 'Greek' },
     { name: 'Indian' },
     { name: 'French' },
-    { name: 'Books' },
+    { name: 'Mexican' },
     { name: 'Toys' }
   ]);
 
@@ -218,6 +218,53 @@ db.once('open', async () => {
         }
       ]
     },
+    {
+      name: 'Biscuit Basket',
+      description:
+        'Fresh and delicious Greek food with all the classics!',
+      image: '/platos-plate/gyro.jpg',
+      category: categories[0]._id,
+      price: 4.99,
+      products: [
+        {
+          name: "Greek Fries",
+          description: "Crispy, crunchy fries with chunks of feta cheese, drizzled with olive oil.",
+          price: 6.99,
+          image: '/platos-plate/greek-fries.jpg'
+        },
+        {
+          name: "Spanakopita",
+          description: "Tasty spinach cooked with onions and feta cheese, wrapped in a flaky phyllo dough.",
+          price: 9.99,
+          image: '/platos-plate/spanakopita.jpg'
+        },
+        {
+          name: "Greek Salad",
+          description: "Fresh lettuce, sliced onions, slice cucumbers, olives, and feta cheese, tossed with salad dressing.",
+          price: 6.99,
+          image: '/platos-plate/greek-salad.jpg'
+
+        },
+        {
+          name: "Gyro",
+          description: "Sliced roasted lamb with sliced onions and tomatos, wrapped in a warm pita.",
+          price: 10.99,
+          image: '/platos-plate/gyro.jpg'
+        },
+        {
+          name: "Moussaka",
+          description: "Layered grounded lamb and roasted eggplant, topped with a bechemel sauce.",
+          price: 12.99,
+          image: '/platos-plate/moussaka.jpg'
+        },
+        {
+          name: "Soft Drink",
+          description: "Always cold soda.",
+          price: 1.99,
+          image: '/platos-plate/soft-drink.jpg'
+        }
+      ]
+    },
   ]);
 
   console.log('restaurants seeded');
@@ -225,14 +272,14 @@ db.once('open', async () => {
   await User.deleteMany();
 
   await User.create({
-    userName: 'user1',
+    username: 'user1',
     email: 'user1@gmail.com',
     password: 'password123',
     orders: []
   });
 
   await User.create({
-    userName: 'user2',
+    username: 'user2',
     email: 'user2@gmail.com',
     password: 'password123',
     orders: []
