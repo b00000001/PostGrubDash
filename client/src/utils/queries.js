@@ -26,6 +26,13 @@ export const QUERY_ALL_RESTAURANTS = gql`
       description
       image
       price
+      products {
+        _id
+        name
+        description
+        price
+        image
+      }
     }
   }
 `;
