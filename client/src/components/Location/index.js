@@ -6,7 +6,7 @@ import {
 } from "@react-google-maps/api";
 const Location = () => {
   const { isLoaded, loadError } = useLoadScript({
-    googleMapsApiKey: "AIzaSyBZoR-mUnla0v4s8TCq_tYMUaBYXB4lXbU"
+    googleMapsApiKey: ""
   });
   console.log(loadError);
   if (!isLoaded) return <h1>Loading...</h1>;
