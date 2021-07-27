@@ -9,6 +9,7 @@ import CategoryMenu from '../components/CategoryMenu';
 import RestaurantList from '../components/RestaurantList';
 // import UserList from "../components/UserList";
 import SearchBar from "../components/SearchBar";
+import Cart from "../components/Cart";
 
 const Home = () => {
   const [userLocation, setUserLocation] = React.useState(null);
@@ -31,20 +32,20 @@ const Home = () => {
       console.log("Not Available");
     }
   };
-  const renderUsername = () => {
-    if (!Auth.loggedIn()) return null;
-    return Auth.getProfile().data.username;
-  };
+  // const renderUsername = () => {
+  //   if (!Auth.loggedIn()) return null;
+  //   return Auth.getProfile().data.username;
+  // };
 
   return (
     <main>
       <div className="flex-col justify-center">
-        <div
+        {/* <div
           className="col-12 col-md-10 mb-3 p-3"
           style={{ border: '1px dotted #1a1a1a' }}
         >
           {renderUsername()}
-        </div>
+        </div> */}
 
         <button onClick={() => handleClick()}>Get Location</button>
         {userLocation ? (
@@ -60,6 +61,7 @@ const Home = () => {
         <SearchBar userLocation={userLocation} />
         <CategoryMenu />
         <RestaurantList />
+        <Cart />
       </div>
     </main>
   );
