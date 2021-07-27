@@ -49,11 +49,11 @@ const Header = () => {
     // If logged out show login controls
     return (
       <>
-        <div className="bg-black">
-          <Link className="btn btn-lg btn-info m-2" to="/login">
+        <div className="bg-black nav-bar">
+          <Link className="btn btn-lg btn-info ml-3" to="/login">
             <button>Login</button>
           </Link>
-          <Link className="btn btn-lg btn-light m-2" to="/signup">
+          <Link className="btn btn-lg btn-light ml-3" to="/signup">
             <button>Signup</button>
           </Link>
         </div>

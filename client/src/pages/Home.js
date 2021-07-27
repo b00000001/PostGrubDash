@@ -5,21 +5,17 @@ import { useQuery } from "@apollo/client";
 import Auth from "../utils/auth";
 // import { QUERY_USERS } from '../utils/queries';
 // Components
-import UserList from "../components/UserList";
-import RestaurantCard from "../components/RestaurantCard";
+import CategoryMenu from '../components/CategoryMenu';
+import RestaurantList from '../components/RestaurantList';
+// import UserList from "../components/UserList";
 import SearchBar from "../components/SearchBar";
+import Cart from "../components/Cart";
+
 const Home = () => {
   const [userLocation, setUserLocation] = React.useState(null);
   // const { loading, data } = useQuery(QUERY_USERS);
   // const users = data?.users || [];
 
-  // const renderUserList = () => {
-  //   if (loading) {
-  //     return <h2>Loading...</h2>
-  //   } else {
-  //     return <UserList users={users} title="List of Users" />
-  //   }
-  // }
   const handleClick = () => {
     console.log("click");
     if ("geolocation" in navigator) {
@@ -33,10 +29,10 @@ const Home = () => {
       console.log("Location Not Available");
     }
   };
-  const renderUsername = () => {
-    if (!Auth.loggedIn()) return null;
-    return Auth.getProfile().data.username;
-  };
+  // const renderUsername = () => {
+  //   if (!Auth.loggedIn()) return null;
+  //   return Auth.getProfile().data.username;
+  // };
 
   return (
     <main>
@@ -47,6 +43,7 @@ const Home = () => {
         >
           {renderUsername()}
         </div> */}
+
         <button onClick={() => handleClick()}>Get Location</button>
         {userLocation ? (
           <h3>
@@ -60,16 +57,9 @@ const Home = () => {
         ) : null}
         <Location />
         <SearchBar userLocation={userLocation} />
-        <div className="flex justify-center p-4">
-          <div className="grid grid-flow-row grid-cols-3 grid-rows-2 gap-10">
-            <RestaurantCard />
-            <RestaurantCard />
-            <RestaurantCard />
-            <RestaurantCard />
-            <RestaurantCard />
-            <RestaurantCard />
-          </div>
-        </div>
+        <CategoryMenu />
+        <RestaurantList />
+        <Cart />
       </div>
     </main>
   );

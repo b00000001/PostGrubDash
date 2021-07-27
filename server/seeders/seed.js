@@ -22,7 +22,8 @@ db.once('open', async () => {
     { name: 'Indian' },
     { name: 'French' },
     { name: 'Mexican' },
-    { name: 'Hawaiian' }
+    { name: 'Hawaiian' },
+    { name: 'Donut' }
   ]);
 
   console.log('categories seeded');
@@ -99,14 +100,14 @@ db.once('open', async () => {
         },
         {
           name: "Pakoda",
-          description: "Delicious indian crisp fried snack made with flour,spices and paneer.",
+          description: "savory indian crisp fried snack made with flour,spices and paneer.",
           price: 14.99,
           image: '/king-spicy/pakoda.jpg'
 
         },
         {
           name: "Poha",
-          description: "Delicious and healthy breakfast recipe made with onions, potatoes and seasoning like chillies, crushed peanuts, lemon and curry leaves. ",
+          description: "succulent and healthy breakfast recipe made with onions, potatoes and seasoning like chillies, crushed peanuts, lemon and curry leaves. ",
           price:10.99,
           image: '/king-spicy/poha.jpg'
         },
@@ -139,45 +140,50 @@ db.once('open', async () => {
           image: '/la-belle-helene/boeuf-bourguignon.jpg'
         },
         {
+          name: "Salade Niçoise",
+          description: "A mix of lettuce, fresh tomatoes, boiled eggs,tuna, green beans, Nicoise Cailletier olives, and anchovies.",
+          price: 4.99,
+          image: '/la-belle-helene/salade-nicoise.jpg'
+        },
+        {
+          name: "Coq Au Vin",
+          description: "Delicious dish made of chicken braised with wine, mushrooms, salty pork or bacon (lardons), mushrooms, onions, garlic. ",
+          price: 20.99,
+          image:'/la-belle-helene/coq-au-vin.jpg'
+        },
+        {
+          name: "Flamiche",
+          description: "A puff-pastry crust filled with cheese and vegetables and resembles a quiche.",
+          price: 4.99,
+          image:'/la-belle-helene/flamiche.jpg'
+        },
+        {
+          name: "Ratatouille",
+          description: "Most iconic french dishes made with vegetables shallow-fried ",
+          price: 12.99,
+          image: '/la-belle-helene/ratatouille.jpg'
+        },
+        {
+          name: "Soufflé au chocolat",
+          description: "An exquisite dessert that combines dark chocolate with a creamy egg yolk base and fluffy egg whites.",
+          price: 5.99,
+          image: '/la-belle-helene/chocolate-souffle.jpg'
+        },
+        {
           name: "Absinthe",
           description: "Bright-green, aniseed-flavored liqueur is famous for its hallucinatory effects.",
           price: 15.99,
           image: '/la-belle-helene/absinthe.jpg'
         },
-        {
-          name: "Salade Niçoise",
-          description: "A mix of lettuce, fresh tomatoes, boiled eggs,tuna, green beans, Nicoise Cailletier olives, and anchovies.",
-          price: 4.99,
-          image: '/king-spicy/salade-niçoise.jpg'
-
-        },
-        {
-          name: "Coq Au Vin",
-          description: "Delicious dish made of chicken braised with wine, mushrooms, salty pork or bacon (lardons), mushrooms, onions, garlic. ",
-          price:20.99,
-          image:'/la-belle-helene/coq-qu-vin.jpg'
-        },
-        {
-          name: "Flamiche",
-          description: "This a puff-pastry crust filled with cheese and vegetables and resembles a quiche.",
-          price: 2.99,
-          image:'/la-belle-helene/flamiche.jpg'
-        },
-        {
-          name: "Ratatouille",
-          description: "Iconic french made with vegetables shallow-fried and then layered in a casserole dish before being baked in an oven",
-          price: 1.35,
-          image: '/la-belle-helene/ratatouille.jpg'
-        }
       ]
     },
     {
       name: 'El Amigo',
       description:
         'Vibrant Mexican eatery with modern twists on traditional classics',
-      image: 'el/amigo/tacos.jpg',
+      image: 'el-amigo/quesadilla.jpg',
       category: categories[3]._id,
-      price: 9.99,
+      price: 4.99,
       products: [
         {
           name: "Burrito",
@@ -202,7 +208,7 @@ db.once('open', async () => {
           name: "Quesadilla",
           description: "Sliced roasted lamb with sliced onions and tomatos, wrapped in a warm pita.",
           price: 10.99,
-          image: '/platos-plate/gyro.jpg'
+          image: '/el-amigo/quesadilla.jpg'
         },
         {
           name: "Nachos Supreme",
@@ -222,8 +228,8 @@ db.once('open', async () => {
       name: 'Ohana Bros',
       description:
         'Authentic Hawaiian food made with love',
-      image: '/ohana-bros/gyro.jpg',
-      category: categories[0]._id,
+      image: '/ohana-bros/loco-moco-plate.jpg',
+      category: categories[4]._id,
       price: 4.99,
       products: [
         {
@@ -252,16 +258,110 @@ db.once('open', async () => {
           image: '/ohana-bros/teriyaki-chicken-plate.jpg'
         },
         {
-          name: "Musubi Stack",
+          name: "Musubi, Stack of 4",
           description: "Grilled Spam slices on top of white rice, wrapped with seaweed.",
           price: 7.99,
           image: '/ohana-bros/musubi.jpg'
         },
         {
           name: "Craft Beer",
-          description: "Always cold soda.",
+          description: "Made with malted barley.",
           price: 16.99,
           image: '/ohana-bros/craft-beer.jpg'
+        }
+      ]
+    },
+    {
+      name: 'Ye Olde Donut Shop',
+      description:
+        'Donuts and coffee that you can count on!',
+      image: '/ye-olde-donut-shop/glazed-donut.jpg',
+      category: categories[5]._id,
+      price: 2.99,
+      products: [
+        {
+          name: "Apple Cinnamon Donut",
+          description: "An apple donut, coated with cinnamon sugar.",
+          price: 1.00,
+          image: '/ye-olde-donut-shop/apple-cinnamon-donut.jpg'
+        },
+        {
+          name: "Glazed Donut",
+          description: "A yeast dough donut, dipped in a sugary glaze.",
+          price: 1.00,
+          image: '/ye-olde-donut-shop/glazed-donut.jpg'
+
+        },
+        {
+          name: "Glazed Sour Cream",
+          description: "A sour cream dough donut, dipped in a sugary glaze.",
+          price: 1.10,
+          image: '/ye-olde-donut-shop/glazed-sour-cream.jpg'
+        },
+        {
+          name: "Raspberry Jelly Donut",
+          description: "A sugar coated donut, filled with raspberry jelly.",
+          price: 1.05,
+          image: '/ye-olde-donut-shop/raspberry-jelly-donut.jpg'
+        },
+        {
+          name: "Crueller",
+          description: "A flaky donut, dipped in a sugary glaze.",
+          price: 1.35,
+          image: '/ye-olde-donut-shop/crueller.jpg'
+        },
+        {
+          name: "Coffee",
+          description: "Fresh brewed donut shop coffee.",
+          price: 1.00,
+          image: '/ye-olde-donut-shop/coffee.jpg'
+        },
+        {
+          name: "Milk",
+          description: "Whole milk from a local dairy.",
+          price: 1.20,
+          image: '/ye-olde-donut-shop/milk.jpg'
+        }
+      ]
+    },
+    {
+      name: 'Tortuga',
+      description:
+        'Flavorful rustic mexican dishes',
+      image: 'tortuga/birria.jpg',
+      category: categories[3]._id,
+      price: 4.99,
+      products: [
+        {
+          name: "Birria Quesatacos",
+          description: "Our best seller! Beef brisket marinated in 3 diffrenet type of chiles, topped with queso blanco and servered with the birria marinade.",
+          price: 13.99,
+          image: '/tortuga/birria.jpg'
+        },
+        {
+          name: "Tamales",
+          description: "Five steamed cornhusks filled with pork, chiles, and vegetables.",
+          price: 11.99,
+          image: '/tortuga/tamales.jpg'
+        },
+        {
+          name: "Enchiladas",
+          description: "Two beef enchiladas topped with queso blanco servered with a side of our tex-mex avacado salad.",
+          price: 15.99,
+          image: '/tortuga/enchilada.jpg'
+
+        },
+        {
+          name: "Churros!",
+          description: "Be serious, who can resist fresh made churros?",
+          price: 7.99,
+          image: '/tortuga/churros.jpg'
+        },
+        {
+          name: "Jarritos",
+          description: "Cool off with some soda. Flavors are lime, mango, fruit punch, pineapple, and mandarin",
+          price: 1.99,
+          image: '/tortuga/jarrito.jpg'
         }
       ]
     },

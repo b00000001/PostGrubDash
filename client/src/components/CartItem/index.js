@@ -33,9 +33,9 @@ const CartItem = ({ item }) => {
   };
 
   return (
-    <div className="flex-row">
+    <div className="flex-row border-2">
       <div>
-        <img src={`/images/${item.image}`} alt="" />
+        <img className="max-w-xs p-8" src={`/images/${item.image}`} alt="" />
       </div>
       <div>
         <div>

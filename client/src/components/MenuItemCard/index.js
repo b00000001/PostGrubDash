@@ -1,24 +1,50 @@
-import React from 'react'
+import React from 'react';
+import { useStoreContext } from "../../utils/GlobalState";
+import { ADD_TO_CART, UPDATE_CART_QUANTITY } from "../../utils/actions";
+import { idbPromise } from "../../utils/helpers";
 
-const MenuItemCard = () => {
+const MenuItemCard = (item) => {
+    const { image, name, _id, price, description } = item;
+    const [state, dispatch] = useStoreContext();
+    const { cart } = state
+
+    const addToCart = () => {
+        const itemInCart = cart.find((cartItem) => cartItem._id === _id)
+        if (itemInCart) {
+            dispatch({
+                type: UPDATE_CART_QUANTITY,
+                _id: _id,
+                purchaseQuantity: parseInt(itemInCart.purchaseQuantity) + 1
+            });
+            idbPromise('cart', 'put', {
+                ...itemInCart,
+                purchaseQuantity: parseInt(itemInCart.purchaseQuantity) + 1
+            });
+        } else {
+            dispatch({
+                type: ADD_TO_CART,
+                product: { ...item, purchaseQuantity: 1 }
+            });
+            idbPromise('cart', 'put', { ...item, purchaseQuantity: 1 });
+        }
+    }
+
     return (
-        <div className="m-3 shadow-lg">
+        <div className="m-10 shadow-lg container">
             <div className="flex">
-                <div className='p-3'>
-                    <h2 className="font-bold">Shawarma Dream</h2>
-                    <p>white basmati rice (1/2), mixed greens (1/2), chicken shawarma (1/2) steak shawarma (1/2), turkish salad, lebanese tabbouleh, classic hummus, spicy feta dip, baba ganoush, chickpea salad, pickled turnips, tzatziki, and harissa</p>
+                <div className="flex-1">
+                    <img className="lg:max-w-md sm:max-w-xs m-3" src={`/images/${image}`} alt="" />
                 </div>
-                <div>
-                    <img src="https://cn-geo1.uber.com/image-proc/resize/eats/format=webp/width=550/height=440/quality=70/srcb64=aHR0cHM6Ly9kMXJhbHNvZ25qbmczNy5jbG91ZGZyb250Lm5ldC80OWE0MGNlMy0yODAwLTQzZjktODNiYy1jMTU2YjQzYmY1NmUuanBlZw==" alt="" />
+                <div className='flex-1'>
+                    <div className="pl-3 pt-3">
+                      <h2 className="font-bold text-3xl mb-5">{name}</h2>
+                    <p className="mb-3 text-xl mr-8">{description}</p>  
+                    <span className="inline text-2xl mb-5">${price}</span>
+                    <br/>
+                      <button className="btn btn-lg btn-info m-2 inline mt-5" onClick={addToCart}>Add to cart</button>
+                    </div>
                 </div>
             </div>
-
-            <div className="flex justify-around items-center p-2">
-                <span>$12.25</span>
-
-                <button className="bg-indigo-400 text-white border border-indigo-600 p-2">Add to cart</button>
-            </div>
-
         </div>
     )
 }
