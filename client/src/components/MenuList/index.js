@@ -50,7 +50,7 @@ function MenuList() {
 
     return (
         <div className="my-2">
-            <h2>Our Menu Items: </h2>
+            <h2 className="text-3xl ml-3">Our Menu Items: </h2>
             {currMenuList.length ? (
                 <div className="flex-row">
                     {currMenuList.map((restaurant) => (

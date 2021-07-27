@@ -47,7 +47,7 @@ function RestaurantList() {
       <h2 className="text-xl font-bold">Available Restaurants:</h2>
       {restaurants.length ? (
         <div className="flex justify-center p-4">
-          <div className="grid grid-flow-row grid-cols-3 grid-rows-2 gap-10">
+          <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3  grid-flow-row gap-10">
             {restaurants.map((restaurant) => (
               <RestaurantCard
                 key={restaurant._id}
