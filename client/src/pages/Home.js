@@ -5,8 +5,8 @@ import { useQuery } from "@apollo/client";
 import Auth from "../utils/auth";
 // import { QUERY_USERS } from '../utils/queries';
 // Components
-import CategoryMenu from '../components/CategoryMenu';
-import RestaurantList from '../components/RestaurantList';
+import CategoryMenu from "../components/CategoryMenu";
+import RestaurantList from "../components/RestaurantList";
 // import UserList from "../components/UserList";
 import SearchBar from "../components/SearchBar";
 import Cart from "../components/Cart";
@@ -37,6 +37,7 @@ const Home = () => {
   return (
     <main>
       <div className="flex-col justify-center">
+        {/*  */}
         {/* <div
           className="col-12 col-md-10 mb-3 p-3"
           style={{ border: '1px dotted #1a1a1a' }}
