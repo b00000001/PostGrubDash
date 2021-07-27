@@ -33,7 +33,7 @@ const MenuItemCard = (item) => {
         <div className="m-10 shadow-lg container">
             <div className="flex">
                 <div className="flex-1">
-                    <img className="max-w-md" src={`/images/${image}`} alt="" />
+                    <img className="lg:max-w-md sm:max-w-xs m-3" src={`/images/${image}`} alt="" />
                 </div>
                 <div className='flex-1'>
                     <div className="pl-3 pt-3">
