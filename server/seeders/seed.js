@@ -100,14 +100,14 @@ db.once('open', async () => {
         },
         {
           name: "Pakoda",
-          description: "Delicious indian crisp fried snack made with flour,spices and paneer.",
+          description: "savory indian crisp fried snack made with flour,spices and paneer.",
           price: 14.99,
           image: '/king-spicy/pakoda.jpg'
 
         },
         {
           name: "Poha",
-          description: "Delicious and healthy breakfast recipe made with onions, potatoes and seasoning like chillies, crushed peanuts, lemon and curry leaves. ",
+          description: "succulent and healthy breakfast recipe made with onions, potatoes and seasoning like chillies, crushed peanuts, lemon and curry leaves. ",
           price:10.99,
           image: '/king-spicy/poha.jpg'
         },
@@ -143,7 +143,7 @@ db.once('open', async () => {
           name: "Salade Niçoise",
           description: "A mix of lettuce, fresh tomatoes, boiled eggs,tuna, green beans, Nicoise Cailletier olives, and anchovies.",
           price: 4.99,
-          image: '/la-belle-helene/salade-niçoise.jpg'
+          image: '/la-belle-helene/salade-nicoise.jpg'
         },
         {
           name: "Coq Au Vin",
@@ -159,7 +159,7 @@ db.once('open', async () => {
         },
         {
           name: "Ratatouille",
-          description: "Made with vegetables shallow-fried and then layered in a casserole dish before being baked in an oven",
+          description: "Most iconic french dishes made with vegetables shallow-fried ",
           price: 12.99,
           image: '/la-belle-helene/ratatouille.jpg'
         },
@@ -167,7 +167,7 @@ db.once('open', async () => {
           name: "Soufflé au chocolat",
           description: "An exquisite dessert that combines dark chocolate with a creamy egg yolk base and fluffy egg whites.",
           price: 5.99,
-          image: '/la-belle-helene/ratatouille.jpg'
+          image: '/la-belle-helene/chocolate-souffle.jpg'
         },
         {
           name: "Absinthe",
