@@ -17,7 +17,6 @@ function MenuList() {
       const restaurants = data?.restaurants || [];
       const currRestaurant = restaurants.find(restaurant => restaurant._id === id);
       const currMenuList = currRestaurant.products;
-      console.log(currRestaurant.products.map(restaurant => restaurant.name));
 
       // useEffect(() => {
       //   if (data) {
