@@ -10,6 +10,7 @@ import RestaurantList from '../components/RestaurantList';
 // import UserList from "../components/UserList";
 import SearchBar from "../components/SearchBar";
 import Cart from "../components/Cart";
+import Location from "../components/Location";
 
 const Home = () => {
   const [userLocation, setUserLocation] = React.useState(null);

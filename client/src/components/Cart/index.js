@@ -16,10 +16,13 @@ const stripePromise = loadStripe('pk_test_TYooMQauvdEDq54NiTphI7jx');
 const Cart = () => {
     const [state, dispatch] = useStoreContext();
     const [getCheckout, { data }] = useLazyQuery(QUERY_CHECKOUT);
-
+    
+    console.log('DATA: ',data);
       useEffect(() => {
         if (data) {
           stripePromise.then((res) => {
+            //   console.log(res);
+            //   console.log('Here');
             res.redirectToCheckout({ sessionId: data.checkout.session });
           });
         }
@@ -56,9 +59,9 @@ const Cart = () => {
                 productIds.push(item._id);
             }
         });
-
+        console.log("HERE2:", productIds);
         getCheckout({
-            variables: { products: productIds },
+            variables: { productIds: productIds },
         });
     }
 

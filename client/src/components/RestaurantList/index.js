@@ -1,46 +1,46 @@
 import React, { useEffect } from 'react';
 import RestaurantCard from '../RestaurantCard';
 import { useStoreContext } from '../../utils/GlobalState';
-// import { UPDATE_PRODUCTS } from '../../utils/actions';
+import { UPDATE_PRODUCTS, UPDATE_RESTAURANTS } from '../../utils/actions';
 import { useQuery } from '@apollo/client';
 import { QUERY_RESTAURANTS_BY_CATEGORY, QUERY_ALL_RESTAURANTS } from '../../utils/queries';
-// import { idbPromise } from '../../utils/helpers';
+import { idbPromise } from '../../utils/helpers';
 import spinner from '../../assets/spinner.gif';
 
 function RestaurantList() {
-  // const [state, dispatch] = useStoreContext();
-  // const { currentCategory } = state;
+  const [state, dispatch] = useStoreContext();
+  const { currentCategory } = state;
   const { loading, data } = useQuery(QUERY_ALL_RESTAURANTS);
   const restaurants = data?.restaurants || [];
 
-  // useEffect(() => {
-  //   if (data) {
-  //     // dispatch({
-  //     //   type: UPDATE_PRODUCTS,
-  //     //   restaurants: data.restaurants,
-  //     // });
-  //     data.restaurants.forEach((restaurant) => {
-  //       idbPromise('restaurants', 'put', restaurant);
-  //     });
-  //   } else if (!loading) {
-  //     idbPromise('restaurants', 'get').then((restaurants) => {
-  //       dispatch({
-  //         type: UPDATE_PRODUCTS,
-  //         restaurants: restaurants,
-  //       });
-  //     });
-  //   }
-  // }, [data, loading, dispatch]);
+  useEffect(() => {
+    if (data) {
+      dispatch({
+        type: UPDATE_RESTAURANTS,
+        restaurants: data.restaurants,
+      });
+      data.restaurants.forEach((restaurant) => {
+        idbPromise('restaurants', 'put', restaurant);
+      });
+    } else if (!loading) {
+      idbPromise('restaurants', 'get').then((restaurants) => {
+        dispatch({
+          type: UPDATE_RESTAURANTS,
+          restaurants: restaurants,
+        });
+      });
+    }
+  }, [data, loading, dispatch]);
 
-  // function filterRestaurants() {
-  //   // if (!currentCategory) {
-  //   //   return state.restaurants;
-  //   // }
+  function filterRestaurants() {
+    if (!currentCategory) {
+      return state.restaurants;
+    }
 
-  //   return state.restaurants.filter(
-  //     (restaurant) => restaurant.category._id === currentCategory
-  //   );
-  // }
+    return state.restaurants.filter(
+      (restaurant) => restaurant.category._id === currentCategory
+    );
+  }
 
   return (
     <div className="flex-col m-2">
