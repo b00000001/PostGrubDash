@@ -181,9 +181,9 @@ db.once('open', async () => {
       name: 'El Amigo',
       description:
         'Vibrant Mexican eatery with modern twists on traditional classics',
-      image: 'el-amigo/tacos.jpg',
+      image: 'el-amigo/quesadilla.jpg',
       category: categories[3]._id,
-      price: 9.99,
+      price: 4.99,
       products: [
         {
           name: "Burrito",
