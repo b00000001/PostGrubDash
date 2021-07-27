@@ -1,0 +1,44 @@
+[
+    {
+      "name": "Boeuf Bourguignon",
+      "description": "Stew made from beef braised in red wine, beef broth, and seasoned vegetables including pearl onions and mushrooms..",
+      "price": 18.99,
+      "image": "/la-belle-helene/boeuf-bourguignon.jpg"
+    },
+    {
+      "name": "Salade Niçoise",
+      "description": "A mix of lettuce, fresh tomatoes, boiled eggs,tuna, green beans, Nicoise Cailletier olives, and anchovies.",
+      "price": 4.99,
+      "image": "/la-belle-helene/salade-nicoise.jpg"
+    },
+    {
+      "name": "Coq Au Vin",
+      "description": "Delicious dish made of chicken braised with wine, mushrooms, salty pork or bacon (lardons), mushrooms, onions, garlic. ",
+      "price": 20.99,
+      "image":"/la-belle-helene/coq-au-vin.jpg"
+    },
+    {
+      "name": "Flamiche",
+      "description": "A puff-pastry crust filled with cheese and vegetables and resembles a quiche.",
+      "price": 4.99,
+      "image":"/la-belle-helene/flamiche.jpg"
+    },
+    {
+      "name": "Ratatouille",
+      "description": "Most iconic french dishes made with vegetables shallow-fried ",
+      "price": 12.99,
+      "image": "/la-belle-helene/ratatouille.jpg"
+    },
+    {
+      "name": "Soufflé au chocolat",
+      "description": "An exquisite dessert that combines dark chocolate with a creamy egg yolk base and fluffy egg whites.",
+      "price": 5.99,
+      "image": "/la-belle-helene/chocolate-souffle.jpg"
+    },
+    {
+      "name": "Absinthe",
+      "description": "Bright-green, aniseed-flavored liqueur is famous for its hallucinatory effects.",
+      "price": 15.99,
+      "image": "/la-belle-helene/absinthe.jpg"
+    }
+]

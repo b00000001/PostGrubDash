@@ -1,0 +1,38 @@
+[
+    {
+      "name": "Tomato Rice",
+      "description": "A flavorful and delicious dish made with rice and tomatoes,spices and herbs.",
+      "price": 8.99,
+      "image": "/king-spicy/tomato-rice.jpg"
+    },
+    {
+      "name": "Chana Masala",
+      "description": "It’s a hearty, saucy chickpea and tomato dish with warming spices.",
+      "price": 13.99,
+      "image": "/king-spicy/chana-masala.jpg"
+    },
+    {
+      "name": "Pakoda",
+      "description": "savory indian crisp fried snack made with flour,spices and paneer.",
+      "price": 14.99,
+      "image": "/king-spicy/pakoda.jpg"
+    },
+    {
+      "name": "Poha",
+      "description": "succulent and healthy breakfast recipe made with onions, potatoes and seasoning like chillies, crushed peanuts, lemon and curry leaves. ",
+      "price": 10.99,
+      "image": "/king-spicy/poha.jpg"
+    },
+    {
+      "name": "Vegetarian Biryani",
+      "description": "An aromatic rice dish made with basmati rice, mix veggies, herbs & biryani spice.",
+      "price": 12.99,
+      "image": "/king-spicy/veg-biryani.jpg"
+    },
+    {
+      "name": "Gulkand Chai",
+      "description": "Popular preserved tea made from rose petals that are dried and mixed along with sugar mixture.",
+      "price": 1.50,
+      "image": "/king-spicy/gulkand_chai.jpg"
+    }
+]

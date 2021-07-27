@@ -1,0 +1,38 @@
+[
+    {
+        "name": "Kalua Plate",
+        "description": "Succulent roast pork served with white rice and homemade macaroni salad.",
+        "price": 12.99,
+        "image": "/ohana-bros/kalua-plate.jpg"
+    },
+    {
+        "name": "Chicken Katsu Plate",
+        "description": "Crispy, fried chicken served with white rice and homemade macaroni salad.",
+        "price": 11.99,
+        "image": "/ohana-bros/chicken-katsu-plate.jpg"
+    },
+    {
+        "name": "Loco Moco Plate",
+        "description": "Burger patty topped with two fried eggs and gravy, served with white rice and homemade macaroni salad.",
+        "price": 10.99,
+        "image": "/ohana-bros/loco-moco-plate.jpg"
+    },
+    {
+        "name": "Teriyaki Chicken Plate",
+        "description": "Teriyaki-glazed chicken served with white rice and homemade macaroni salad.",
+        "price": 10.99,
+        "image": "/ohana-bros/teriyaki-chicken-plate.jpg"
+    },
+    {
+        "name": "Musubi, Stack of 4",
+        "description": "Grilled Spam slices on top of white rice, wrapped with seaweed.",
+        "price": 7.99,
+        "image": "/ohana-bros/musubi.jpg"
+    },
+    {
+        "name": "Craft Beer",
+        "description": "Made with malted barley.",
+        "price": 16.99,
+        "image": "/ohana-bros/craft-beer.jpg"
+    }
+]
