@@ -71,7 +71,7 @@ const Cart = () => {
     }
 
     return (
-        <div className="fixed top-0 right-0 min-w-min-1/5 max-w-max-2/5 bg-white">
+        <div className="fixed top-0 right-0 min-w-min-1/5 max-w-max-2/5 bg-white border-2 overflow-auto max-h-80">
             <div className="close" onClick={toggleCart}>
                 [close]
             </div>
