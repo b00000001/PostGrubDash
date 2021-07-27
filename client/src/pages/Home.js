@@ -19,17 +19,14 @@ const Home = () => {
   const handleClick = () => {
     console.log("click");
     if ("geolocation" in navigator) {
-      console.log("Available");
       navigator.geolocation.getCurrentPosition(function (position) {
         setUserLocation({
           lat: position.coords.latitude,
           lng: position.coords.longitude
         });
-        console.log("Latitude is :", position.coords.latitude);
-        console.log("Longitude is :", position.coords.longitude);
       });
     } else {
-      console.log("Not Available");
+      console.log("Location Not Available");
     }
   };
   // const renderUsername = () => {
@@ -58,6 +55,7 @@ const Home = () => {
             Latitude {userLocation.lng}
           </h3>
         ) : null}
+        <Location />
         <SearchBar userLocation={userLocation} />
         <CategoryMenu />
         <RestaurantList />
