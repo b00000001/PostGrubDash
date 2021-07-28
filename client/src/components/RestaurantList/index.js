@@ -48,7 +48,7 @@ function RestaurantList() {
       {restaurants.length ? (
         <div className="flex justify-center p-4">
           <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3  grid-flow-row gap-10">
-            {restaurants.map((restaurant) => (
+            {filterRestaurants().map((restaurant) => (
               <RestaurantCard
                 key={restaurant._id}
                 _id={restaurant._id}
