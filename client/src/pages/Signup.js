@@ -52,7 +52,7 @@ const Signup = () => {
               <form onSubmit={handleFormSubmit}>
                 <h2 className="text-2xl">Don't have an account yet? Sign up here!</h2>
                 <br/>
-                <label class="block text-grey-darker text-sm font-bold mb-2" for="username">
+                <label className="block text-grey-darker text-sm font-bold mb-2" for="username">
                   Username
                 </label>
                 <input
@@ -63,7 +63,7 @@ const Signup = () => {
                   value={formState.name}
                   onChange={handleChange}
                 />
-                <label class="block text-grey-darker text-sm font-bold mb-2" for="email">
+                <label className="block text-grey-darker text-sm font-bold mb-2" for="email">
                   Email
                 </label>
                 <input
@@ -74,7 +74,7 @@ const Signup = () => {
                   value={formState.email}
                   onChange={handleChange}
                 />
-                <label class="block text-grey-darker text-sm font-bold mb-2" for="password">
+                <label className="block text-grey-darker text-sm font-bold mb-2" for="password">
                   Password
                 </label>
                 <input
