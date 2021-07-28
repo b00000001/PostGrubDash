@@ -9,16 +9,19 @@ import { QUERY_ALL_RESTAURANTS } from '../../utils/queries';
 import spinner from '../../assets/spinner.gif';
 
 function MenuList() {
-    //   const [state, dispatch] = useStoreContext();
-      const { id } = useParams();
-      const { loading, data } = useQuery(QUERY_ALL_RESTAURANTS);
-      const restaurants = data?.restaurants || [];
-      const currRestaurant = restaurants.find(restaurant => restaurant._id === id);
-      const currMenuList = currRestaurant.products;
+    const [state, dispatch] = useStoreContext();
+    const { id } = useParams();
+    const { loading, data } = useQuery(QUERY_ALL_RESTAURANTS);
+    //   const restaurants = data?.restaurants || [];
+    const restaurants = state.restaurants || [];
+    const currRestaurant = restaurants.find(restaurant => restaurant._id === id);
+    const currMenuList = currRestaurant.products;
 
     return (
         <div className="my-2">
-            <h2 className="text-3xl ml-3">Our Menu Items: </h2>
+            <div className="flex justify-evenly p-5">
+            <h2 className="text-4xl font-bold">{currRestaurant.name} Menu Items</h2>
+            </div>
             {currMenuList.length ? (
                 <div className="flex-row">
                     {currMenuList.map((restaurant) => (
