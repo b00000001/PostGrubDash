@@ -9,15 +9,14 @@ const Location = ({ userLocation }) => {
     googleMapsApiKey: process.env.REACT_APP_GOOGLE_MAPS_API_KEY
   });
   console.log(loadError);
-  console.log("userLocation Props", userLocation);
   if (!isLoaded) return <h1> Loading...</h1>;
   return (
     <div>
       <GoogleMap>
         <DistanceMatrixService
-          options={{            
+          options={{
             destinations: [{ lat: 35.227229, lng: -80.843069 }],
-            origins: [{ lng: userLocation.lng, lat: userLocation.lat }],
+            origins: [{ lng: 35.227229, lat: 80.843069 }],
 
             travelMode: "DRIVING"
           }}
