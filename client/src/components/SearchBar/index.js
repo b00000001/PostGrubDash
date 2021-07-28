@@ -1,7 +1,6 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
-
 export const SearchBar = ({ userLocation }) => {
   return (
     <div className="map-back">
@@ -9,7 +8,7 @@ export const SearchBar = ({ userLocation }) => {
         <div className="relative">
           <input
             type="text"
-            className="h-14 w-96 pr-8 pl-5 rounded z-0 focus:shadow focus:outline-none"
+            className="h-14 w-96 pr-8 pl-5 rounded z-0 focus:shadow border-2 border-black focus:outline-none"
             placeholder={
               userLocation
                 ? `${userLocation.lat}, ${userLocation.lng}`
