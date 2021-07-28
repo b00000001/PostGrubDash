@@ -15,7 +15,7 @@ const resolvers = {
       return await Category.find();
     },
     restaurants: async () => {
-      return await Restaurant.find({});
+      return await Restaurant.find({}).populate('products');
     },
     order: async (parent, { _id }, context) => {
       if (context.user) {
@@ -29,15 +29,17 @@ const resolvers = {
     },
     checkout: async (parent, args, context) => {
       const url = new URL(context.headers.referer).origin;
-      const order = new Order({ products: args.products });
+      const order = new Order({ products: args.productIds });
       const line_items = [];
       const { products } = await order.populate("products").execPopulate();
+      console.log('HERE3:', products);
       for (let i = 0; i < products.length; i++) {
         const product = await stripe.products.create({
           name: products[i].name,
           description: products[i].description,
           images: [`${url}/images/${products[i].image}`]
         });
+        console.log('HERE4:', products);
         const price = await stripe.prices.create({
           product: product.id,
           unit_amount: products[i].price * 100,
@@ -47,6 +49,7 @@ const resolvers = {
           price: price.id,
           quantity: 1
         });
+        console.log('HERE5:', line_items);
       }
       const session = await stripe.checkout.sessions.create({
         payment_method_types: ["card"],
@@ -55,6 +58,7 @@ const resolvers = {
         success_url: `${url}/success?session_id={CHECKOUT_SESSION_ID}`,
         cancel_url: `${url}/`
       });
+      console.log('HERE4:', session);
       return { session: session.id };
     }
   },

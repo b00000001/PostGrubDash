@@ -11,15 +11,14 @@ const Location = ({ userLocation }) => {
   console.log(loadError);
   console.log("userLocation Props", userLocation);
   if (!isLoaded) return <h1> Loading...</h1>;
-
   return (
     <div>
       <GoogleMap>
         <DistanceMatrixService
-          options={{
-            //
+          options={{            
             destinations: [{ lat: 35.227229, lng: -80.843069 }],
             origins: [{ lng: userLocation.lng, lat: userLocation.lat }],
+
             travelMode: "DRIVING"
           }}
           callback={(response) => {

@@ -8,16 +8,21 @@ import Auth from '../../utils/auth';
 import { useStoreContext } from '../../utils/GlobalState';
 import { TOGGLE_CART, ADD_MULTIPLE_TO_CART } from '../../utils/actions';
 import './style.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faShoppingCart } from "@fortawesome/free-solid-svg-icons";
 
 const stripePromise = loadStripe('pk_test_TYooMQauvdEDq54NiTphI7jx');
 
 const Cart = () => {
     const [state, dispatch] = useStoreContext();
     const [getCheckout, { data }] = useLazyQuery(QUERY_CHECKOUT);
-
+    
+    console.log('DATA: ',data);
       useEffect(() => {
         if (data) {
           stripePromise.then((res) => {
+            //   console.log(res);
+            //   console.log('Here');
             res.redirectToCheckout({ sessionId: data.checkout.session });
           });
         }
@@ -54,9 +59,9 @@ const Cart = () => {
                 productIds.push(item._id);
             }
         });
-
+        console.log("HERE2:", productIds);
         getCheckout({
-            variables: { products: productIds },
+            variables: { productIds: productIds },
         });
     }
 
@@ -64,7 +69,7 @@ const Cart = () => {
         return (
             <div className="cart-closed" onClick={toggleCart}>
                 <span role="img" aria-label="trash">
-                    🛒
+                   <FontAwesomeIcon icon={faShoppingCart}/>
                 </span>
             </div>
         );

@@ -1,0 +1,44 @@
+[
+    {
+        "name": "Apple Cinnamon Donut",
+        "description": "An apple donut, coated with cinnamon sugar.",
+        "price": 1.05,
+        "image": "/ye-olde-donut-shop/apple-cinnamon-donut.jpg"
+    },
+    {
+        "name": "Glazed Donut",
+        "description": "A yeast dough donut, dipped in a sugary glaze.",
+        "price": 1.05,
+        "image": "/ye-olde-donut-shop/glazed-donut.jpg"
+    },
+    {
+        "name": "Glazed Sour Cream",
+        "description": "A sour cream dough donut, dipped in a sugary glaze.",
+        "price": 1.15,
+        "image": "/ye-olde-donut-shop/glazed-sour-cream.jpg"
+    },
+    {
+        "name": "Raspberry Jelly Donut",
+        "description": "A sugar coated donut, filled with raspberry jelly.",
+        "price": 1.05,
+        "image": "/ye-olde-donut-shop/raspberry-jelly-donut.jpg"
+    },
+    {
+        "name": "Crueller",
+        "description": "A flaky donut, dipped in a sugary glaze.",
+        "price": 1.35,
+        "image": "/ye-olde-donut-shop/crueller.jpg"
+    },
+    {
+        "name": "Coffee",
+        "description": "Fresh brewed donut shop coffee.",
+        "price": 1.05,
+        "image": "/ye-olde-donut-shop/coffee.jpg"
+    },
+    {
+        "name": "Milk",
+        "description": "Whole milk from a local dairy.",
+        "price": 1.25,
+        "image": "/ye-olde-donut-shop/milk.jpg"
+    }
+]

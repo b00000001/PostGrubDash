@@ -27,9 +27,13 @@ const Home = () => {
           lng: position.coords.longitude
         });
       });
+        setUserDistance(true);
+        console.log("Latitude is :", position.coords.latitude);
+        console.log("Longitude is :", position.coords.longitude);
+      });
       setUserDistance(true);
     } else {
-      console.log("Not Available");
+      console.log("Location Not Available");
     }
   };
   // const renderUsername = () => {
@@ -61,6 +65,7 @@ const Home = () => {
             Latitude {userLocation.lng}
           </h3>
         ) : null}
+        <Location />
         <SearchBar userLocation={userLocation} />
         <CategoryMenu />
         <RestaurantList />

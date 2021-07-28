@@ -13,7 +13,16 @@ const app = express();
 const server = new ApolloServer({
   typeDefs,
   resolvers,
-  context: authMiddleware
+  context: authMiddleware,
+  formatError: (err) => {
+    console.log(err);
+    return err;
+  },
+  logger: {
+    debug: true,
+    error: true,
+    info: true,
+  },
 });
 // app.use(express.static(path.join(__dirname, "../client")));
 

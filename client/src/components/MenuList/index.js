@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import MenuItemCard from '../MenuItemCard';
 import { useStoreContext } from '../../utils/GlobalState';
-// import { UPDATE_PRODUCTS } from '../../utils/actions';
+// import { UPDATE_RESTAURANTS } from '../../utils/actions';
 import { useQuery } from '@apollo/client';
 import { useParams } from 'react-router-dom';
 import { QUERY_ALL_RESTAURANTS } from '../../utils/queries';
@@ -9,43 +9,12 @@ import { QUERY_ALL_RESTAURANTS } from '../../utils/queries';
 import spinner from '../../assets/spinner.gif';
 
 function MenuList() {
-      // const [state, dispatch] = useStoreContext();
-      // const { currentCategory } = state;
-      // const { loading, data } = useQuery(QUERY_PRODUCTS);
+    //   const [state, dispatch] = useStoreContext();
       const { id } = useParams();
       const { loading, data } = useQuery(QUERY_ALL_RESTAURANTS);
       const restaurants = data?.restaurants || [];
       const currRestaurant = restaurants.find(restaurant => restaurant._id === id);
       const currMenuList = currRestaurant.products;
-
-      // useEffect(() => {
-      //   if (data) {
-      //     dispatch({
-      //       type: UPDATE_PRODUCTS,
-      //       products: data.products,
-      //     });
-      //     data.products.forEach((restaurant) => {
-      //       idbPromise('products', 'put', restaurant);
-      //     });
-      //   } else if (!loading) {
-      //     idbPromise('products', 'get').then((products) => {
-      //       dispatch({
-      //         type: UPDATE_PRODUCTS,
-      //         products: products,
-      //       });
-      //     });
-      //   }
-      // }, [data, loading, dispatch]);
-
-      // function filterProducts() {
-      //   if (!currentCategory) {
-      //     return state.products;
-      //   }
-
-      //   return state.products.filter(
-      //     (restaurant) => restaurant.category._id === currentCategory
-      //   );
-      // }
 
     return (
         <div className="my-2">

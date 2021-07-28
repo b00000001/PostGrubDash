@@ -1,0 +1,32 @@
+[
+    {
+        "name": "Birria Quesatacos",
+        "description": "Our best seller! Beef brisket marinated in 3 diffrenet type of chiles, topped with queso blanco and servered with the birria marinade.",
+        "price": 13.99,
+        "image": "/tortuga/birria.jpg"
+    },
+    {
+        "name": "Tamales",
+        "description": "Five steamed cornhusks filled with pork, chiles, and vegetables.",
+        "price": 11.99,
+        "image": "/tortuga/tamales.jpg"
+    },
+    {
+        "name": "Enchiladas",
+        "description": "Two beef enchiladas topped with queso blanco servered with a side of our tex-mex avacado salad.",
+        "price": 15.99,
+        "image": "/tortuga/enchilada.jpg"
+    },
+    {
+        "name": "Churros!",
+        "description": "Be serious, who can resist fresh made churros?",
+        "price": 7.99,
+        "image": "/tortuga/churros.jpg"
+    },
+    {
+        "name": "Jarritos",
+        "description": "Cool off with some soda. Flavors are lime, mango, fruit punch, pineapple, and mandarin",
+        "price": 1.99,
+        "image": "/tortuga/jarrito.jpg"
+    }
+]
