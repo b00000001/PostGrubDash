@@ -19,8 +19,6 @@ const Home = () => {
   });
   const [userDistance, setUserDistance] = React.useState(false);
   const [userDestination, setUserDestination] = React.useState("");
-  // const { loading, data } = useQuery(QUERY_USERS);
-  // const users = data?.users || [];
 
   const handleClick = () => {
     if ("geolocation" in navigator) {
@@ -36,10 +34,6 @@ const Home = () => {
       console.log("Location Not Available");
     }
   };
-  // const renderUsername = () => {
-  //   if (!Auth.loggedIn()) return null;
-  //   return Auth.getProfile().data.username;
-  // };
 
   return (
     <main>
@@ -47,14 +41,6 @@ const Home = () => {
         {userDistance ? (
           <Location userLocation={userLocation} destination={userDestination} />
         ) : null}
-        {/* <div
-          className="col-12 col-md-10 mb-3 p-3"
-          style={{ border: '1px dotted #1a1a1a' }}
-        >
-          {renderUsername()}
-        </div> */}
-
-        {/* <button onClick={() => handleClick()}>Get Location</button> */}
         {userLocation ? (
           <h3>
             <strong>
