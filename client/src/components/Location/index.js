@@ -9,6 +9,7 @@ const Location = ({ userLocation }) => {
     googleMapsApiKey: process.env.REACT_APP_GOOGLE_MAPS_API_KEY
   });
   console.log(loadError);
+  console.log("userLocation Props", userLocation);
   if (!isLoaded) return <h1> Loading...</h1>;
   return (
     <div>
