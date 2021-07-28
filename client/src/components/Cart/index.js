@@ -77,32 +77,29 @@ const Cart = () => {
 
     return (
         <div className="fixed top-0 right-0 min-w-min-1/5 max-w-max-2/5 bg-white border-2 overflow-auto max-h-80">
-            <div className="close" onClick={toggleCart}>
+            <div className="close float-right pr-1" onClick={toggleCart}>
                 [close]
             </div>
-            <h2>Your Order:</h2>
+            <h2 className="px-1">Your Order:</h2>
             {state.cart.length ? (
                 <div>
                     {state.cart.map((item) => (
                         <CartItem key={item._id} item={item} />
                     ))}
 
-                    <div className="flex flex-row justify-between items-center">
+                    <div className="flex flex-row justify-between items-center px-1">
                         <strong>Total: ${calculateTotal()}</strong>
 
                         {Auth.loggedIn() ? (
                             <button onClick={submitCheckout}>Checkout</button>
                         ) : (
-                            <span>(log in to check out)</span>
+                            <span>(Log in to check out)</span>
                         )}
                     </div>
                 </div>
             ) : (
                 <h3>
-                    <span role="img" aria-label="shocked">
-                        😱
-                    </span>
-                    You haven't added anything to your cart yet!
+                    Your cart is empty!
                 </h3>
             )}
         </div>
