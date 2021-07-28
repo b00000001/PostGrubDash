@@ -26,6 +26,9 @@ export const QUERY_ALL_RESTAURANTS = gql`
       description
       image
       price
+      category {
+        _id
+      }
       products {
         _id
         name
@@ -42,6 +45,17 @@ export const QUERY_ME = gql`
       _id
       username
       email
+      orders {
+        _id
+        purchaseDate
+        products {
+          _id
+          name
+          description
+          price
+          image
+        }
+      }
     }
   }
 `;

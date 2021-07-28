@@ -23,6 +23,7 @@ const typeDefs = gql`
     username: String
     email: String
     password: String
+    orders: [Order]
   }
   type Product {
     _id: ID
@@ -48,8 +49,8 @@ const typeDefs = gql`
   type Mutation {
     addUser(username: String!, email: String!, password: String!): Auth
     login(email: String!, password: String!): Auth
+    addOrder(productIds: [ID]!): Order
   }
 `;
 module.exports = typeDefs;
 
-// addOrder(productIds: [ID]!): Order
