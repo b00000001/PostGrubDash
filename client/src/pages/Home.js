@@ -54,7 +54,7 @@ const Home = () => {
           {renderUsername()}
         </div> */}
 
-        <button onClick={() => handleClick()}>Get Location</button>
+        {/* <button onClick={() => handleClick()}>Get Location</button> */}
         {userLocation ? (
           <h3>
             <strong>
