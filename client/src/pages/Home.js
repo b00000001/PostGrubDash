@@ -13,7 +13,10 @@ import Cart from "../components/Cart";
 import Location from "../components/Location";
 
 const Home = () => {
-  const [userLocation, setUserLocation] = React.useState(null);
+  const [userLocation, setUserLocation] = React.useState({
+    lat: "35.227229",
+    lng: "-80.843069"
+  });
   const [userDistance, setUserDistance] = React.useState(false);
   const [userDestination, setUserDestination] = React.useState("");
   // const { loading, data } = useQuery(QUERY_USERS);
@@ -26,10 +29,7 @@ const Home = () => {
           lat: position.coords.latitude,
           lng: position.coords.longitude
         });
-      });
         setUserDistance(true);
-        console.log("Latitude is :", position.coords.latitude);
-        console.log("Longitude is :", position.coords.longitude);
       });
       setUserDistance(true);
     } else {
@@ -54,7 +54,7 @@ const Home = () => {
           {renderUsername()}
         </div> */}
 
-        <button onClick={() => handleClick()}>Get Location</button>
+        {/* <button onClick={() => handleClick()}>Get Location</button> */}
         {userLocation ? (
           <h3>
             <strong>
