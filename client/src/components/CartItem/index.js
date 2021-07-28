@@ -58,7 +58,7 @@ const CartItem = ({ item }) => {
             aria-label="trash"
             onClick={() => removeFromCart(item)}
           >
-            <FontAwesomeIcon className="fa-lg" icon={faTrashAlt}/>
+            <FontAwesomeIcon className="fa-lg cursor-pointer" icon={faTrashAlt}/>
           </span>
         </div>
       </div>
