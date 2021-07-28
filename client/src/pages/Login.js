@@ -54,7 +54,7 @@ const Login = (props) => {
               <form onSubmit={handleFormSubmit}>
                 <h2 className="text-2xl">Already have an account? Log in here!</h2>
                 <br/>
-                <label class="block text-grey-darker text-sm font-bold mb-2" for="email">
+                <label className="block text-grey-darker text-sm font-bold mb-2" for="email">
                   Email
                 </label>
                 <input
@@ -65,7 +65,7 @@ const Login = (props) => {
                   value={formState.email}
                   onChange={handleChange}
                 />
-                <label class="block text-grey-darker text-sm font-bold mb-2" for="password">
+                <label className="block text-grey-darker text-sm font-bold mb-2" for="password">
                   Password
                 </label>
                 <input
