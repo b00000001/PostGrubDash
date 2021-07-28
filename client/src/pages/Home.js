@@ -15,6 +15,7 @@ import Location from "../components/Location";
 const Home = () => {
   const [userLocation, setUserLocation] = React.useState(null);
   const [userDistance, setUserDistance] = React.useState(false);
+  const [userDestination, setUserDestination] = React.useState("");
   // const { loading, data } = useQuery(QUERY_USERS);
   // const users = data?.users || [];
 
@@ -25,10 +26,8 @@ const Home = () => {
           lat: position.coords.latitude,
           lng: position.coords.longitude
         });
-        setUserDistance(true);
-        console.log("Latitude is :", position.coords.latitude);
-        console.log("Longitude is :", position.coords.longitude);
       });
+      setUserDistance(true);
     } else {
       console.log("Not Available");
     }
@@ -41,7 +40,9 @@ const Home = () => {
   return (
     <main>
       <div className="flex-col justify-center">
-        {userDistance ? <Location userLocation={userLocation} /> : null}
+        {userDistance ? (
+          <Location userLocation={userLocation} destination={userDestination} />
+        ) : null}
         {/* <div
           className="col-12 col-md-10 mb-3 p-3"
           style={{ border: '1px dotted #1a1a1a' }}
