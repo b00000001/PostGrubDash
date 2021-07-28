@@ -2,6 +2,7 @@ import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
 export const SearchBar = ({ userLocation }) => {
+  // Comment added for Heroku.
   return (
     <div className="map-back">
       <div className="container h-96 flex justify-center items-center px-4 sm:px-6 lg:px-8">
