@@ -10,6 +10,7 @@ import { TOGGLE_CART, ADD_MULTIPLE_TO_CART } from "../../utils/actions";
 import "./style.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faShoppingCart } from "@fortawesome/free-solid-svg-icons";
+import { Link } from "react-router-dom";
 
 const stripePromise = loadStripe("pk_test_TYooMQauvdEDq54NiTphI7jx");
 
@@ -76,7 +77,7 @@ const Cart = () => {
 
   return (
     <div className="fixed top-0 right-0 min-w-min-1/5 max-w-max-2/5 bg-white border-2 overflow-auto max-h-80">
-      <div className="close float-right pr-1" onClick={toggleCart}>
+      <div className="close float-right pr-1 cursor-pointer" onClick={toggleCart}>
         [close]
       </div>
       <h2 className="px-1">Your Order:</h2>
@@ -92,7 +93,9 @@ const Cart = () => {
             {Auth.loggedIn() ? (
               <button onClick={submitCheckout}>Checkout</button>
             ) : (
-              <span>(Log in to check out)</span>
+              <Link className="cursor-pointer" to="/signup">
+                <span>(log in to check out)</span>
+              </Link>
             )}
           </div>
         </div>
@@ -104,3 +107,4 @@ const Cart = () => {
 };
 
 export default Cart;
+
