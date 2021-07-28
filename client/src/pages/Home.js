@@ -14,17 +14,22 @@ import Location from "../components/Location";
 
 const Home = () => {
   const [userLocation, setUserLocation] = React.useState(null);
+  const [userDistance, setUserDistance] = React.useState(false);
   // const { loading, data } = useQuery(QUERY_USERS);
   // const users = data?.users || [];
 
   const handleClick = () => {
-    console.log("click");
     if ("geolocation" in navigator) {
       navigator.geolocation.getCurrentPosition(function (position) {
         setUserLocation({
           lat: position.coords.latitude,
           lng: position.coords.longitude
         });
+
+        setUserDistance(true);
+        console.log("Latitude is :", position.coords.latitude);
+        console.log("Longitude is :", position.coords.longitude);
+
       });
     } else {
       console.log("Location Not Available");
@@ -38,7 +43,7 @@ const Home = () => {
   return (
     <main>
       <div className="flex-col justify-center">
-        {/*  */}
+        {userDistance ? <Location userLocation={userLocation} /> : null}
         {/* <div
           className="col-12 col-md-10 mb-3 p-3"
           style={{ border: '1px dotted #1a1a1a' }}

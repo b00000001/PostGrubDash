@@ -4,19 +4,20 @@ import {
   GoogleMap,
   useLoadScript
 } from "@react-google-maps/api";
-const Location = () => {
+const Location = ({ userLocation }) => {
   const { isLoaded, loadError } = useLoadScript({
-    googleMapsApiKey: ""
+    googleMapsApiKey: process.env.REACT_APP_GOOGLE_MAPS_API_KEY
   });
   console.log(loadError);
-  if (!isLoaded) return <h1>Loading...</h1>;
+  if (!isLoaded) return <h1> Loading...</h1>;
   return (
     <div>
       <GoogleMap>
         <DistanceMatrixService
-          options={{
-            destinations: [{ lat: 1.296788, lng: 103.778961 }],
-            origins: [{ lng: 103.780267, lat: 1.291692 }],
+          options={{            
+            destinations: [{ lat: 35.227229, lng: -80.843069 }],
+            origins: [{ lng: userLocation.lng, lat: userLocation.lat }],
+
             travelMode: "DRIVING"
           }}
           callback={(response) => {
