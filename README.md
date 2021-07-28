@@ -2,7 +2,7 @@
 
 ![postgrubdash-demo](./media/demos/postgrubdash-demo.gif)
 
-[Deployed Site](#)
+[Deployed Site](https://postgrubdash.herokuapp.com/)
 
 ## Description
 PostGrubDash is a food delivery application that shows nearby restaurants and allows the user to select menu items to be delivered.
