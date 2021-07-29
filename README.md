@@ -15,13 +15,6 @@ PostGrubDash is a food delivery application that shows nearby restaurants and al
   - [Screenshots](#screenshots)
   - [License](#license)
 
-## Contributors
- - [huirayj](https://github.com/huirayj)
- - [b00000001](https://github.com/b00000001)
- - [aaron-might](https://github.com/aaron-might)
- - [Sand-ito](https://github.com/Sand-ito)
- - [nzerr57](https://github.com/nzerr57)
-
 ## Installation 
 In order to run this program locally you will need to:
 1. Clone this repository to receive all the files.
